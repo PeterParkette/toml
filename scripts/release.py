@@ -221,7 +221,7 @@ def prepare_release(version: str, spec_repo: Path, website_repo: Path) -> None:
     run("git", "tag", "-m", "backup", backup_tag, cwd=spec_repo)
     run("git", "tag", "-m", "backup", backup_tag, cwd=website_repo)
 
-    date = datetime.today().strftime("%Y-%m-%d")
+    date = datetime.now().strftime("%Y-%m-%d")
     release_heading = f"## {version} / {date}"
     release_message = f"Release v{version}"
 
